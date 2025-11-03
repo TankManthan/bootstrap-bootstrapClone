@@ -1,9 +1,9 @@
 # 📘 Bootstrap Documentation Clone – Get Started Page
 
-![GitHub stars](https://img.shields.io/github/stars/TankManthan/bootstrap-documentation-clone?style=flat-square)
-![GitHub forks](https://img.shields.io/github/forks/TankManthan/bootstrap-documentation-clone?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/TankManthan/bootstrap-documentation-clone?style=flat-square)
-![GitHub license](https://img.shields.io/github/license/TankManthan/bootstrap-documentation-clone?style=flat-square)
+![GitHub stars](https://img.shields.io/github/stars/TankManthan/bootstrap-bootstrapClone?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/TankManthan/bootstrap-bootstrapClone?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/TankManthan/bootstrap-bootstrapClone?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/TankManthan/bootstrap-bootstrapClone?style=flat-square)
 
 ---
 
@@ -14,7 +14,7 @@ It features a responsive layout, sidebar navigation, search modal, syntax-highli
 ---
 
 ### 🌐 Live Demo
-👉 [**Click here to view the project**](https://tankmanthan.github.io/bootstrap-documentation-clone/)
+👉 [**Click here to view the project**](https://tankmanthan.github.io/bootstrap-bootstrapClone/)
 
 ---
 
@@ -42,15 +42,19 @@ It features a responsive layout, sidebar navigation, search modal, syntax-highli
 
 ### 📂 Project Structure
 ├── index.html # Main documentation page
+
 ├── style.css # Custom styles for layout and theme
+
 ├── script.js # Clipboard and interactivity logic
+
 ├── assets/ # Images and supporting files
+
 └── README.md # Project documentation
 
 ### ⚙️ Setup & Usage
 1. Clone this repository
    ```bash
-   git clone https://github.com/TankManthan/bootstrap-documentation-clone.git
+   git clone https://github.com/TankManthan/bootstrap-bootstrapClone.git
    
 2. Open the folder
    cd bootstrap-documentation-clone
