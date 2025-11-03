@@ -65,6 +65,6 @@ Open index.html directly in your browser.
 4. Explore
 Navigate the sidebar, toggle themes, and use the search modal to browse content.
 
-Preview
+### 📸 Preview
 <img width="1349" height="587" alt="image" src="https://github.com/user-attachments/assets/d811ffc2-f2d8-493f-aa11-37859260281a" />
 
