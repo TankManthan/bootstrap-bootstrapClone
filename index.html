@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Get started with Bootstrap · Bootstrap v5.3</title>
+    <!-- Bootstarp stylesheet  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Custom stylesheet  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FavIcon  -->
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+
+    <!-- Bootstrap icon  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+    <!-- top navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top border-bottom" id="navbar">
+        <div class="container-fluid">
+            <!-- logo -->
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118 94" role="img" class="d-block me-2" height="32"
+                    width="40">
+                    <title>Bootstrap</title>
+                    <path fill-rule="evenodd" clip-rule="evenodd" fill="white"
+                        d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+                        fill="currentColor"></path>
+                </svg>
+            </div>
+
+            <!-- Mobile toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links + right section -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left links -->
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Docs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Examples</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Icons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                </ul>
+
+                <!-- Right utilities -->
+                <div class="d-flex mx-auto">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary search" id="search" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        <span id="search_pos"> <i class="bi bi-search me-2"></i>Search</span> <span
+                            class="badge text-white" id="search_badge">CTRL
+                            K</span>
+                    </button>
+                </div>
+
+                <!-- Version dropdown -->
+                <i class="bi bi-github text-white m-2"></i>
+                <i class="bi bi-twitter-x text-white m-2"></i>
+                <i class="bi bi-opencollective text-white m-2"></i>
+                <span class="m-2 text-white">| </span>
+
+                <div class="dropdown m-2">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+                        v5.3
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item disabled">v5 releases</a></li>
+                        <li><a class="dropdown-item active">Latest (v5.2.x)</a></li>
+                        <li><a class="dropdown-item">v5.2.3</a></li>
+                        <li><a class="dropdown-item">v5.1.3</a></li>
+                        <li><a class="dropdown-item">v5.0.2</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item disabled">Previous releases</a></li>
+                        <li><a class="dropdown-item">v4.6.x</a></li>
+                        <li><a class="dropdown-item">v3.4.1</a></li>
+                        <li><a class="dropdown-item">v2.3.2</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item">All versions</a></li>
+                    </ul>
+                </div>
+                <span class="m-2 text-white">| </span>
+                <!-- Theme toggle -->
+                <div class="dropdown m-2">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+
+                        <i class="bi bi-sun-fill"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item active"><i class="bi bi-sun-fill"></i> Light</a></li>
+                        <li><a class="dropdown-item"><i class="bi bi-moon-stars-fill"></i> Dark</a></li>
+                        <li><a class="dropdown-item"><i class="bi bi-circle-half"></i> Auto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav><br><br><br>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center" style="background-color: rgb(245 246 247);">
+                    <div class="input-group" style="height: 50px;">
+                        <span class="input-group-text bg-white border-2 border-end-0" style="border-color:#7952b3">
+                            <i class="bi bi-search text-purple" style="color:#7952b3;"></i>
+                        </span>
+                        <input type="text" class="form-control search-input border-2 border-start-0 h-20"
+                            placeholder="Search docs" style="border-color: rgb(124 60 249);">
+                    </div>
+                    <div class="py-4 text-secondary">No recent searches
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between search-footer px-4"
+                    style="background-color: rgb(255 255 255);">
+                    <div>
+                        <span class="kbd-hint"><i class="bi bi-arrow-down-left-square-fill"></i></span> to select &nbsp;
+                        <span class="kbd-hint"><i class="bi bi-arrow-up-square-fill"></i> <i
+                                class="bi bi-arrow-down-square-fill"></i></span> to navigate &nbsp;
+                        <span class="kbd-hint"></span> <i><b>Esc</b></i> to close
+                    </div>
+                    <small>Search by <span class="text-primary fw-semibold"><svg width="77" height="19"
+                                aria-label="Algolia" role="img" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 2196.2 500">
+                                <defs>
+                                    <style>
+                                        .cls-1,
+                                        .cls-2 {
+                                            fill: #003dff;
+                                        }
+
+                                        .cls-2 {
+                                            fill-rule: evenodd;
+                                        }
+                                    </style>
+                                </defs>
+                                <path
+                                    d="M1070.38,275.3V5.91c0-3.63-3.24-6.39-6.82-5.83l-50.46,7.94c-2.87,.45-4.99,2.93-4.99,5.84l.17,273.22c0,12.92,0,92.7,95.97,95.49,3.33,.1,6.09-2.58,6.09-5.91v-40.78c0-2.96-2.19-5.51-5.12-5.84-34.85-4.01-34.85-47.57-34.85-54.72Z"
+                                    class="cls-2"></path>
+                                <rect x="1845.88" y="104.73" width="62.58" height="277.9" rx="5.9" ry="5.9"
+                                    class="cls-1">
+                                </rect>
+                                <path
+                                    d="M1851.78,71.38h50.77c3.26,0,5.9-2.64,5.9-5.9V5.9c0-3.62-3.24-6.39-6.82-5.83l-50.77,7.95c-2.87,.45-4.99,2.92-4.99,5.83v51.62c0,3.26,2.64,5.9,5.9,5.9Z"
+                                    class="cls-2"></path>
+                                <path
+                                    d="M1764.03,275.3V5.91c0-3.63-3.24-6.39-6.82-5.83l-50.46,7.94c-2.87,.45-4.99,2.93-4.99,5.84l.17,273.22c0,12.92,0,92.7,95.97,95.49,3.33,.1,6.09-2.58,6.09-5.91v-40.78c0-2.96-2.19-5.51-5.12-5.84-34.85-4.01-34.85-47.57-34.85-54.72Z"
+                                    class="cls-2"></path>
+                                <path
+                                    d="M1631.95,142.72c-11.14-12.25-24.83-21.65-40.78-28.31-15.92-6.53-33.26-9.85-52.07-9.85-18.78,0-36.15,3.17-51.92,9.85-15.59,6.66-29.29,16.05-40.76,28.31-11.47,12.23-20.38,26.87-26.76,44.03-6.38,17.17-9.24,37.37-9.24,58.36,0,20.99,3.19,36.87,9.55,54.21,6.38,17.32,15.14,32.11,26.45,44.36,11.29,12.23,24.83,21.62,40.6,28.46,15.77,6.83,40.12,10.33,52.4,10.48,12.25,0,36.78-3.82,52.7-10.48,15.92-6.68,29.46-16.23,40.78-28.46,11.29-12.25,20.05-27.04,26.25-44.36,6.22-17.34,9.24-33.22,9.24-54.21,0-20.99-3.34-41.19-10.03-58.36-6.38-17.17-15.14-31.8-26.43-44.03Zm-44.43,163.75c-11.47,15.75-27.56,23.7-48.09,23.7-20.55,0-36.63-7.8-48.1-23.7-11.47-15.75-17.21-34.01-17.21-61.2,0-26.89,5.59-49.14,17.06-64.87,11.45-15.75,27.54-23.52,48.07-23.52,20.55,0,36.63,7.78,48.09,23.52,11.47,15.57,17.36,37.98,17.36,64.87,0,27.19-5.72,45.3-17.19,61.2Z"
+                                    class="cls-2"></path>
+                                <path
+                                    d="M894.42,104.73h-49.33c-48.36,0-90.91,25.48-115.75,64.1-14.52,22.58-22.99,49.63-22.99,78.73,0,44.89,20.13,84.92,51.59,111.1,2.93,2.6,6.05,4.98,9.31,7.14,12.86,8.49,28.11,13.47,44.52,13.47,1.23,0,2.46-.03,3.68-.09,.36-.02,.71-.05,1.07-.07,.87-.05,1.75-.11,2.62-.2,.34-.03,.68-.08,1.02-.12,.91-.1,1.82-.21,2.73-.34,.21-.03,.42-.07,.63-.1,32.89-5.07,61.56-30.82,70.9-62.81v57.83c0,3.26,2.64,5.9,5.9,5.9h50.42c3.26,0,5.9-2.64,5.9-5.9V110.63c0-3.26-2.64-5.9-5.9-5.9h-56.32Zm0,206.92c-12.2,10.16-27.97,13.98-44.84,15.12-.16,.01-.33,.03-.49,.04-1.12,.07-2.24,.1-3.36,.1-42.24,0-77.12-35.89-77.12-79.37,0-10.25,1.96-20.01,5.42-28.98,11.22-29.12,38.77-49.74,71.06-49.74h49.33v142.83Z"
+                                    class="cls-2"></path>
+                                <path
+                                    d="M2133.97,104.73h-49.33c-48.36,0-90.91,25.48-115.75,64.1-14.52,22.58-22.99,49.63-22.99,78.73,0,44.89,20.13,84.92,51.59,111.1,2.93,2.6,6.05,4.98,9.31,7.14,12.86,8.49,28.11,13.47,44.52,13.47,1.23,0,2.46-.03,3.68-.09,.36-.02,.71-.05,1.07-.07,.87-.05,1.75-.11,2.62-.2,.34-.03,.68-.08,1.02-.12,.91-.1,1.82-.21,2.73-.34,.21-.03,.42-.07,.63-.1,32.89-5.07,61.56-30.82,70.9-62.81v57.83c0,3.26,2.64,5.9,5.9,5.9h50.42c3.26,0,5.9-2.64,5.9-5.9V110.63c0-3.26-2.64-5.9-5.9-5.9h-56.32Zm0,206.92c-12.2,10.16-27.97,13.98-44.84,15.12-.16,.01-.33,.03-.49,.04-1.12,.07-2.24,.1-3.36,.1-42.24,0-77.12-35.89-77.12-79.37,0-10.25,1.96-20.01,5.42-28.98,11.22-29.12,38.77-49.74,71.06-49.74h49.33v142.83Z"
+                                    class="cls-2"></path>
+                                <path
+                                    d="M1314.05,104.73h-49.33c-48.36,0-90.91,25.48-115.75,64.1-11.79,18.34-19.6,39.64-22.11,62.59-.58,5.3-.88,10.68-.88,16.14s.31,11.15,.93,16.59c4.28,38.09,23.14,71.61,50.66,94.52,2.93,2.6,6.05,4.98,9.31,7.14,12.86,8.49,28.11,13.47,44.52,13.47h0c17.99,0,34.61-5.93,48.16-15.97,16.29-11.58,28.88-28.54,34.48-47.75v50.26h-.11v11.08c0,21.84-5.71,38.27-17.34,49.36-11.61,11.08-31.04,16.63-58.25,16.63-11.12,0-28.79-.59-46.6-2.41-2.83-.29-5.46,1.5-6.27,4.22l-12.78,43.11c-1.02,3.46,1.27,7.02,4.83,7.53,21.52,3.08,42.52,4.68,54.65,4.68,48.91,0,85.16-10.75,108.89-32.21,21.48-19.41,33.15-48.89,35.2-88.52V110.63c0-3.26-2.64-5.9-5.9-5.9h-56.32Zm0,64.1s.65,139.13,0,143.36c-12.08,9.77-27.11,13.59-43.49,14.7-.16,.01-.33,.03-.49,.04-1.12,.07-2.24,.1-3.36,.1-1.32,0-2.63-.03-3.94-.1-40.41-2.11-74.52-37.26-74.52-79.38,0-10.25,1.96-20.01,5.42-28.98,11.22-29.12,38.77-49.74,71.06-49.74h49.33Z"
+                                    class="cls-2"></path>
+                                <path
+                                    d="M249.83,0C113.3,0,2,110.09,.03,246.16c-2,138.19,110.12,252.7,248.33,253.5,42.68,.25,83.79-10.19,120.3-30.03,3.56-1.93,4.11-6.83,1.08-9.51l-23.38-20.72c-4.75-4.21-11.51-5.4-17.36-2.92-25.48,10.84-53.17,16.38-81.71,16.03-111.68-1.37-201.91-94.29-200.13-205.96,1.76-110.26,92-199.41,202.67-199.41h202.69V407.41l-115-102.18c-3.72-3.31-9.42-2.66-12.42,1.31-18.46,24.44-48.53,39.64-81.93,37.34-46.33-3.2-83.87-40.5-87.34-86.81-4.15-55.24,39.63-101.52,94-101.52,49.18,0,89.68,37.85,93.91,85.95,.38,4.28,2.31,8.27,5.52,11.12l29.95,26.55c3.4,3.01,8.79,1.17,9.63-3.3,2.16-11.55,2.92-23.58,2.07-35.92-4.82-70.34-61.8-126.93-132.17-131.26-80.68-4.97-148.13,58.14-150.27,137.25-2.09,77.1,61.08,143.56,138.19,145.26,32.19,.71,62.03-9.41,86.14-26.95l150.26,133.2c6.44,5.71,16.61,1.14,16.61-7.47V9.48C499.66,4.25,495.42,0,490.18,0H249.83Z"
+                                    class="cls-1"></path>
+                            </svg></span></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row d-flex justify-content-between g-0" style="margin-top: 30px;">
+        <!-- left navbar  -->
+        <div class="col-md-2 ps-3">
+            <nav id="navbar-example3" class="flex-column pe-2"
+                style="overflow-y: scroll;height: calc(100vh - 120px);position: sticky;top:90px;left:0px">
+                <nav class="nav nav-pills flex-column ms-2">
+                    <span><i class="bi bi-book-half" style="color: #6610f2;"></i> Getting started</span>
+                    <ul>
+                        <li><a href="#">Introduction</a></li>
+                        <li><a href="#">Download</a></li>
+                        <li><a href="#">Content</a></li>
+                        <li><a href="#">Browsers & devices</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">Webpack</a></li>
+                        <li><a href="#">Parcel</a></li>
+                        <li><a href="#">Vite</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                        <li><a href="#">RFS</a></li>
+                        <li><a href="#">RTL</a></li>
+                        <li><a href="#">Contribute</a></li>
+                    </ul>
+                    <span><i class="bi bi-diamond-half" style="color: #d63384;"></i> Customize</span>
+                    <ul>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Sass</a></li>
+                        <li><a href="#">Options</a></li>
+                        <li><a href="#">Color</a></li>
+                        <li><a href="#">Color modes</a></li>
+                        <li><a href="#">Components</a></li>
+                        <li><a href="#">CSS variables</a></li>
+                        <li><a href="#">Optimize</a></li>
+                    </ul>
+                    <span><i class="bi bi-grid-fill" style="color: #20c997;"></i> Layout</span>
+                    <ul>
+                        <li><a href="#">Breakpoints</a></li>
+                        <li><a href="#">Containers</a></li>
+                        <li><a href="#">Grid</a></li>
+                        <li><a href="#">Columns</a></li>
+                        <li><a href="#">Gutters</a></li>
+                        <li><a href="#">Utilities</a></li>
+                        <li><a href="#">Z-index</a></li>
+                        <li><a href="#">CSS Grid</a></li>
+                    </ul>
+                    <span><i class="bi bi-file-earmark-image" style="color: #6c757d;"></i> Content</span>
+                    <ul>
+                        <li><a href="#">Reboot</a></li>
+                        <li><a href="#">Typography</a></li>
+                        <li><a href="#">Images</a></li>
+                        <li><a href="#">Tables</a></li>
+                        <li><a href="#">Figures</a></li>
+                    </ul>
+                    <span><i class="bi bi-ui-radios" style="color: #0d6efd;"></i> Forms</span>
+                    <ul>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Form control</a></li>
+                        <li><a href="#">Select</a></li>
+                        <li><a href="#">Checks & radios</a></li>
+                        <li><a href="#">Range</a></li>
+                        <li><a href="#">Input group</a></li>
+                        <li><a href="#">Floating labels</a></li>
+                        <li><a href="#">Layout</a></li>
+                        <li><a href="#">Validation</a></li>
+                    </ul>
+                    <span><i class="bi bi-credit-card-2-front-fill" style="color: #0dcaf0;"></i> Components</span>
+                    <ul>
+                        <li><a href="#">Accordion</a></li>
+                        <li><a href="#">Alerts</a></li>
+                        <li><a href="#">Badge</a></li>
+                        <li><a href="#">Breadcrumb</a></li>
+                        <li><a href="#">Buttons</a></li>
+                        <li><a href="#">Button group</a></li>
+                        <li><a href="#">Card</a></li>
+                        <li><a href="#">Carousel</a></li>
+                        <li><a href="#">Close button</a></li>
+                        <li><a href="#">Collapse</a></li>
+                        <li><a href="#">Dropdowns</a></li>
+                        <li><a href="#">List group</a></li>
+                        <li><a href="#">Modal</a></li>
+                        <li><a href="#">Navbar</a></li>
+                        <li><a href="#">Navs & tabs</a></li>
+                        <li><a href="#">Offcanvas </a></li>
+                        <li><a href="#">Pagination</a></li>
+                        <li><a href="#">Placeholders</a></li>
+                        <li><a href="#">Popovers</a></li>
+                        <li><a href="#">Progress</a></li>
+                        <li><a href="#">Scrollspy</a></li>
+                        <li><a href="#">Spinners</a></li>
+                        <li><a href="#">Toasts</a></li>
+                        <li><a href="#">Tooltips</a></li>
+
+                </nav>
+            </nav>
+        </div>
+
+        <!-- middle phase  -->
+        <div class="col-md-8 ps-5 pe-5" style="position: relative;">
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true"
+                class="scrollspy-example-2" tabindex="0">
+                <div id="item-1">
+                    <div style="display: flex;justify-content: space-between;">
+                        <h1 style="font-size: 48px;color:#000000">Get started with Bootstrap</h1>
+                        <button id="gitButton">View on Github</button>
+                    </div>
+                    <p
+                        style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-size: 24px;color: #212529;font-weight: 300;">
+                        Bootstrap is a powerful, feature-packed frontend toolkit. Build anything—from prototype to
+                        production—in minutes.</p>
+                    <h2 style="margin-top: 40px;"><a href="#">
+                            Quick start</a></h2>
+                    <p>Get started by including Bootstrap’s production-ready CSS and JavaScript via CDN without the need
+                        for any build steps.
+                        See it in practice with this <a href="#" class="bfont">Bootstrap CodePen demo</a>.</p>
+                    <p><b>1.Create a new </b><span class="pfont">index.html</span><b> file in
+                            your project
+                            root.</b>
+                        Include the
+                        <span class="pfont">&lt;meta name="viewport"&gt;</span> tag as well for <span
+                            class="bfont">proper
+                            responsive behavior</span>
+                        in mobile
+                        devices.
+                    </p>
+                    <div class="code-container">
+                        <pre>
+
+    &lt;!<span class="gfont">doctype html</span>&gt;
+    &lt;<span class="rfont">html</span> <span class="dbfont">lang</span>="<span class="dpfont">en</span>"&gt;
+      &lt;<span class="rfont">head</span>&gt;
+        &lt;<span class="rfont">meta</span> <span class="dbfont">charset</span>="<span class="dpfont">utf-8</span>" /&gt;
+        &lt;<span class="rfont">meta</span> <span class="dbfont">name</span>="<span class="dpfont">viewport</span>" <span class="dbfont">content</span>="<span class="dpfont">width=device-width, initial-scale=1.0</span>" /&gt;
+        &lt;<span class="rfont">title</span>&gt;Bootstrap demo&lt;/<span class="rfont">title</span>&gt;
+      &lt;/<span class="rfont">head</span>&gt;
+      &lt;<span class="rfont">body</span>&gt;
+        &lt;<span class="rfont">h1</span>&gt;Hello, World!&lt;/<span class="rfont">h1</span>&gt;  
+      &lt;/<span class="rfont">body</span>&gt;
+    &lt;/<span class="rfont">html</span>&gt;
+</pre>
+                        <div>
+                            <button id="copy-btn">
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p><b>2. Include Bootstrap’s CSS and JS.</b> Place the
+                        <span class="pfont"> &lt;link&gt;</span> tag in the
+
+                        <span class="pfont">&lt;head&gt;</span> for our CSS, and the
+                        &lt;script&gt; tag for our JavaScript bundle(including Popper for positioning dropdowns,
+                        popovers, and tooltips) before the closing <span class="pfont">&lt;/body&gt;</span>.Learn more
+                        about
+                        our <span class="bfont">CDN links</span>.
+
+                    </p>
+                    <div class="code-container">
+                        <pre>
+
+    &lt;!<span class="gfont">doctype html</span>&gt;
+    &lt;<span class="rfont">html</span> <span class="dbfont">lang</span>="<span class="dpfont">en</span>"&gt;
+      &lt;<span class="rfont">head</span>&gt;
+        &lt;<span class="rfont">meta</span> <span class="dbfont">charset</span>="<span class="dpfont">utf-8</span>" /&gt;
+        &lt;<span class="rfont">meta</span> <span class="dbfont">name</span>="<span class="dpfont">viewport</span>" <span
+        class="dbfont">content</span>="<span class="dpfont">width=device-width, initial-scale=1.0</span>" /&gt;
+        &lt;<span class="rfont">title</span>&gt;Bootstrap demo&lt;/<span class="rfont">title</span>&gt;
+        &lt;<span class="rfont">link</span> <span class="dbfont">href</span>="<span
+                    class="dpfont">https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css</span>" <span class="dbfont">rel</span>="<span class="dpfont">stylesheet</span>" <span
+                    class="dbfont">integrity</span>="<span
+                    class="dpfont">sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB</span>" <span
+                    class="dbfont">crossorigin</span>="<span class="dpfont">anonymous</span>"&gt;
+      &lt;/<span class="rfont">head</span>&gt;
+      &lt;<span class="rfont">body</span>&gt;
+        &lt;<span class="rfont">h1</span>&gt;Hello, World!&lt;/<span class="rfont">h1</span>&gt;
+        &lt;<span class="rfont">script</span> <span class="dbfont">src</span>="<span class="dpfont">https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js</span>" <span class="dbfont">integrity</span>="<span class="dpfont">sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI</span>" <span class="dbfont">crossorigin</span>="<span class="dpfont">anonymous</span>"&gt;&lt;/<span class="rfont">script</span>&gt;
+      &lt;/<span class="rfont">body</span>&gt;
+    &lt;/<span class="rfont">html</span>&gt;
+
+</pre>
+                        <div>
+                            <button id="copy-btn">
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p>You can also include <span class="bfont">Popper</span> and our JS separately. If you don’t plan
+                        to
+                        use dropdowns,
+                        popovers,
+                        or tooltips, save some
+                        kilobytes by not including Popper.</p>
+                    <div class="code-container">
+                        <pre>
+
+  &lt;<span class="rfont">script</span> <span class="dbfont">src</span>="<span
+        class="dpfont">https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js</span>" <span
+        class="dbfont">integrity</span>="<span
+        class="dpfont">sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r</span>" <span
+        class="dbfont">crossorigin</span>="<span class="dpfont">anonymous</span>"&gt;&lt;/<span
+        class="rfont">script</span>&gt;
+  &lt;<span class="rfont">script</span> <span class="dbfont">src</span>="<span
+        class="dpfont">https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js</span>" <span
+        class="dbfont">integrity</span>="<span
+        class="dpfont">sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y</span>" <span
+        class="dbfont">crossorigin</span>="<span class="dpfont">anonymous</span>"&gt;&lt;/<span
+        class="rfont">script</span>&gt;
+
+</pre>
+                        <div>
+                            <button id="copy-btn">
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p>3. <b>Hello, world!</b> Open the page in your browser of choice to see your Bootstrapped page.
+                        Now
+                        you
+                        can
+                        start building with
+                        Bootstrap by creating your own <span class="bfont">layout</span>, adding dozens of <span
+                            class="bfont">components</span>, and utilizing <span class="bfont">our official
+                            examples</span>.</p>
+                </div>
+                <div>
+                    <h3 style="margin-top: 40px;"><a href="#">CDN links</a></h3>
+                    <p>As reference, here are our primary CDN links.</p>
+                    <div class="table-responsive">
+                        <table class="w-100">
+                            <thead>
+                                <tr>
+                                    <td><b>Description</b></td>
+                                    <td><b>URL</b></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CSS</td>
+                                    <td><span class="pfont"
+                                            style="font-size: smaller;font-family: monospace;">https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>JS</td>
+                                    <td><span class="pfont"
+                                            style="font-size: smaller;font-family: monospace;">https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>You can also use the CDN to fetch any of our <span class="bfont">additional builds listed in the
+                            Contents page</span>.</p>
+                    <p>When using CDN links, be sure to use the <span class="pfont">integrity</span> attribute to verify
+                        the
+                        correct files and
+                        versions. These hashes are unique to each file and version of Bootstrap, so when you update to a
+                        new
+                        version, be sure the <span class="pfont">integrity</span> attribute is also updated.</p>
+                    <p>We also include a <span class="pfont">crossorigin="anonymous"</span> attribute to prevent <span
+                            class="bfont">CORS</span> errors.</p>
+                </div>
+
+                <div>
+                    <h3><a href="item-3"></a>Next steps</h3>
+                    <ul>
+                        <li>Read a bit more about some <span class="bfont">important global environment settings</span>
+                            that
+                            Bootstrap utilizes.</li>
+                        <li>Read about what’s included in Bootstrap in our <span class="bfont">contents section</span>
+                            and
+                            the list of <span class="bfont">components that
+                                require JavaScript</span>
+                            below.</li>
+                        <li>Need a little more power? Consider building with Bootstrap by <span class="bfont">including
+                                the
+                                source files via
+                                package manager</span>.</li>
+                        <li>Looking to use Bootstrap as a module with
+                            <span class="pfont">&lt;script type="module"></span>? Please refer to our <span
+                                class="bfont">using Bootstrap as a module</span> section.
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3><a href="item-3"></a>JS components</h3>
+                    <p>Curious which components explicitly require our JavaScript and Popper? If you’re at all unsure
+                        about
+                        the general page
+                        structure, keep reading for an example page template.</p>
+                    <ul>
+                        <li>Accordions for extending our Collapse plugin</li>
+                        <li>Alerts for dismissing</li>
+                        <li>Buttons for toggling states and checkbox/radio functionality</li>
+                        <li>Carousel for all slide behaviors, controls, and indicators</li>
+                        <li>Collapse for toggling visibility of content</li>
+                        <li>Dropdowns for displaying and positioning (also requires <span class="bfont">Popper</span>)
+                        </li>
+                        <li>Modals for displaying, positioning, and scroll behavior</li>
+                        <li>Modals for displaying, positioning, and scroll behavior</li>
+                        <li>Navs with the Tab plugin for toggling content panes</li>
+                        <li>Offcanvases for displaying, positioning, and scroll behavior</li>
+                        <li>Scrollspy for scroll behavior and navigation updates</li>
+                        <li>Toasts for displaying and dismissing</li>
+                        <li>Tooltips and popovers for displaying and positioning (also requires <span
+                                class="bfont">Popper</span>)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3><a href="item-3"></a>Important globals</h3>
+                    <p>Bootstrap employs a handful of important global styles and settings, all of which are almost
+                        exclusively geared towards
+                        the <i>normalization</i> of cross browser styles. Let’s dive in.</p>
+                </div>
+                <div>
+                    <h3><a href="#">HTML5 doctype</a></h3>
+                    <p>Bootstrap requires the use of the HTML5 doctype. Without it, you’ll see some funky and incomplete
+                        styling.</p>
+                    <pre>
+    &lt;!doctype html&gt;
+    &lt;html lang="en"&gt;
+    ...
+
+    &lt;/html&gt;
+                </pre>
+                </div>
+                <div>
+                    <h3><a href="#">Viewport meta</a></h3>
+                    <p>Bootstrap is developed mobile first, a strategy in which we optimize code for mobile devices
+                        first
+                        and
+                        then
+                        scale up
+                        components as necessary using CSS media queries. To ensure proper rendering and touch zooming
+                        for
+                        all
+                        devices, add the
+                        responsive viewport meta tag to your <span class="pfont">&lt;head&gt;</span>.</p>
+                    <pre>
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</pre>
+                    <p>You can see an example of this in action in the <span class="bfont">quick start</span>.</p>
+                </div>
+                <div>
+                    <h3><a href="#">Box-sizing</a></h3>
+                    <p> For more straightforward sizing in CSS, we switch the global <span
+                            class="pfont">box-sizing</span>
+                        value from <span class="pfont">content-box</span> to
+                        <span class="pfont">border-box</span>. This
+                        ensures <span class="pfont">padding</span> does not affect the final computed width of an
+                        element,
+                        but it can cause problems
+                        with
+                        some
+                        third-party software like Google Maps and Google Custom Search Engine.
+                    </p>
+                    <p>
+                        On the rare occasion you need to override it, use something like the following:
+
+                    </p>
+                    <pre>
+    .selector-for-some-widget {
+    box-sizing: content-box;
+    }
+                </pre>
+                    <p>
+                        With the above snippet, nested elements—including generated content via <span
+                            class="pfont">::before</span> and <span class="pfont">::after</span>—will
+                        all
+                        inherit the
+                        specified <span class="pfont">box-sizing</span> for that <span
+                            class="pfont">.selector-for-some-widget</span>.</p>
+                    <p>
+                        Learn more about <span class="bfont">box model and sizing at CSS Tricks</span>.</p>
+                </div>
+                <div>
+                    <h3><a href="#">Reboot</a></h3>
+                    <p>
+                        For improved cross-browser rendering, we use <span class="bfont">Reboot</span> to correct
+                        inconsistencies across browsers and
+                        devices while
+                        providing slightly more opinionated resets to common HTML elements.</p>
+                </div>
+                <div>
+                    <h3><a href="#">Community</a></h3>
+                    <p>
+                        Stay up-to-date on the development of Bootstrap and reach out to the community with these
+                        helpful
+                        resources.</p>
+                    <ul>
+                        <li> Read and subscribe to <span class="bfont">The Official Bootstrap Blog</span>.</li>
+                        <li> Ask questions and explore <span class="bfont">our GitHub Discussions</span>.</li>
+                        <li> Discuss, ask questions, and more on <span class="bfont">the community Discord</span> or
+                            <span class="bfont">Bootstrap subreddit</span>.
+                        </li>
+                        <li>Chat with fellow Bootstrappers in IRC. On the <span class="pfont">irc.libera.chat</span>
+                            server,
+                            in the <span class="pfont">#bootstrap</span> channel.
+                        </li>
+                        <li> Implementation help may be found at Stack Overflow (tagged <span
+                                class="bfont">bootstrap-5</span>).</li>
+                        <li> Developers should use the keyword <span class="pfont">bootstrap</span> on packages that
+                            modify
+                            or add to the functionality
+                            of
+                            Bootstrap when
+                            distributing through <span class="bfont">npm</span> or similar delivery mechanisms for
+                            maximum
+                            discoverability.</li>
+                    </ul>
+                    <p>You can also follow <span class="bfont">@getbootstrap on X</span> for the latest gossip and
+                        awesome
+                        music videos.</p>
+                </div>
+            </div>
+        </div>
+        <!-- right navbar  -->
+        <div class="col-md-2 pe-2">
+            <nav id="navbar-example3" class="flex-column pe-3"
+                style="overflow-y: scroll;height: calc(100vh - 120px);position: sticky;top:90px;left:0px;">
+                <nav class="nav nav-pills flex-column ms-2">
+                    <span style="margin-left: 25px;">On this page</span>
+                    <hr style="margin: 5px;">
+                    <ul>
+                        <li><a href="#item-1">
+                                Quick start</a></li>
+                        <li><a href="#item-2">
+                                CDN links</a></li>
+                        <li><a href="#item-3">Next steps</a></li>
+                        <li><a href="#item-4">JS components</a></li>
+                        <li><a href="#item-5">Important globals</a></li>
+                        <ul>
+                            <li>HTML5 doctype</li>
+                            <li>Viewport meta</li>
+                            <li>Box-sizing</li>
+                            <li>Reboot</li>
+                        </ul>
+                        <li>Community</li>
+                        <li>
+                            <img src="images/navimg.jpeg" height="120" width="160" alt="">
+                        </li>
+                        <li>Design and Development tips in your inbox. Every weekday.
+                        </li>
+                        <li>ads via Carbon</li>
+                    </ul>
+                </nav>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+        <div class="row d-flex justify-content-evenly p-5 g-0" id="footer">
+            <div class="col-md-4 d-flex flex-column p-5">
+                <div style="display: flex;align-items: center;">
+                    <!-- <a class="navbar-brand" href="#" class="text-white">
+                    <i class="bi bi-bootstrap-fill fs-2"></i> </a> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118 94" role="img" class="d-block me-2"
+                        height="32" width="40">
+                        <title>Bootstrap</title>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+                            fill="currentColor"></path>
+                    </svg>
+                    <p style="margin: 10px;font-weight:700;">Bootstrap</p>
+                </div>
+                <p style="font-size: 14px;">Designed and built with all the love in the <br> world by the <span
+                        style="font-weight: 500;">Bootstrap
+                        team</span> with the<br>
+                    help of <span class="bfont">our
+                        contributors</span>.</p>
+                <p style="font-size: 14px;">Code licensed <span style="font-weight: 500;">MIT</span>, docs <span
+                        style="font-weight: 500;">CC BY 3.0</span>.</p>
+                <p style="font-size: 14px;">Currently v5.3.8.</p>
+            </div>
+
+            <div class="col-md-8 d-flex p-5 justify-content-evenly">
+                <div class="col-md-2 d-flex flex-column ms-2">
+                    <p style="font-size: 20px;margin: 0px;">Links</p>
+                    <a href="#">Home</a>
+                    <a href="#">Docs</a>
+                    <a href="#">Examples</a>
+                    <a href="#">Icons</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Swag Store</a>
+                </div>
+                <div class="col-md-2 d-flex flex-column">
+                    <p style="font-size: 20px;margin: 0px;">Guides</p>
+                    <a href="#">Getting started</a>
+                    <a href="#">Starter template</a>
+                    <a href="#">Webpack</a>
+                    <a href="#">Parcel</a>
+                    <a href="#">Vite</a>
+                </div>
+                <div class="col-md-2 d-flex flex-column">
+                    <p style="font-size: 20px;margin: 0px;">Projects</p>
+                    <a href="#">Bootstrap 5</a>
+                    <a href="#">Bootstrap 4</a>
+                    <a href="#">Icons</a>
+                    <a href="#">RFS</a>
+                    <a href="#">Example repo</a>
+                </div>
+                <div class="col-md-2 d-flex flex-column">
+                    <p style="font-size: 20px;margin: 0px;">Community</p>
+                    <a href="#">Issues</a>
+                    <a href="#">Discussion</a>
+                    <a href="#">Corporate sponsors</a>
+                    <a href="#">Open collective</a>
+                    <a href="#">Stack Overflow</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="script.js"></script>
+
+</html>
